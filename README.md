@@ -1,2 +1,2 @@
 # ToDoListExample
- SwiftUI and CoreData implementation of a ToDoList
+Implementation of a ToDoList with  SwiftUI and CoreData! 
