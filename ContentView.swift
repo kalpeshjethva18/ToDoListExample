@@ -8,6 +8,9 @@
 
 import SwiftUI
 
+let white:Color = Color(red:224/255,green:224/255,blue:224/255)
+let black:Color = Color(red:32/255,green:32/255,blue:32/255)
+
 struct ContentView: View {
     var body: some View {
         ItemsView()
@@ -65,21 +68,21 @@ struct ItemsBodyView:View
                                 {
                                     Image(systemName:"checkmark")
                                         .font(Font.title.weight(.bold))
-                                        .foregroundColor(Color.black)
+                                        .foregroundColor(black)
                                 }
                                 if self.edit
                                 {
                                     Image(systemName:"trash")
                                         .font(Font.title.weight(.bold))
-                                        .foregroundColor(Color.black)
+                                        .foregroundColor(black)
                                         .onTapGesture()
                                         {
                                             self.delete(i)
                                         }
                                 }
                             }.padding()
-                                .foregroundColor(Color.black)
-                                .background(Color.white)
+                                .foregroundColor(black)
+                                .background(white)
                             .cornerRadius(20)
                             .onTapGesture (count: 2){
                                 i.checked.toggle()
@@ -131,8 +134,8 @@ struct ItemsHeaderView: View {
                     .font(.body)
                     .bold()
                     .padding(5)
-                    .foregroundColor(Color.black)
-                    .background(Color.white)
+                    .foregroundColor(black)
+                    .background(white)
                     .cornerRadius(10)
                     .overlay(
                     RoundedRectangle(cornerRadius: 10)
@@ -143,8 +146,8 @@ struct ItemsHeaderView: View {
                 Spacer()
                 TextField("Item",text: $str)
                 .padding(10)
-                .foregroundColor(Color.white)
-                .background(Color.black)
+                .foregroundColor(white)
+                .background(black)
                     .cornerRadius(20)
                 Spacer()
                 Button(action:
@@ -154,7 +157,7 @@ struct ItemsHeaderView: View {
                 {
                     Image(systemName:"plus")
                         .font(Font.title.weight(.bold))
-                    .foregroundColor(Color.black)
+                    .foregroundColor(black)
                     
                 }
                 
