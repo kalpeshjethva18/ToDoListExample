@@ -40,7 +40,6 @@ struct ContentView_Previews: PreviewProvider {
 struct ItemsBodyView:View
 {
     @Environment(\.managedObjectContext) var managedObjectContext
-    @Environment(\.colorScheme) var colorScheme: ColorScheme
     @FetchRequest(
         entity: Item.entity(),
         sortDescriptors: [
@@ -139,7 +138,7 @@ struct ItemsHeaderView: View {
                     .cornerRadius(10)
                     .overlay(
                     RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.black,lineWidth: 2))
+                    .stroke(black,lineWidth: 2))
                 }
             }
             HStack{
@@ -165,7 +164,7 @@ struct ItemsHeaderView: View {
             
             
         }.padding()
-            .background(Color.white)
+            .background(white)
     }
     func insert()
     {
